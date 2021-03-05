@@ -1,15 +1,9 @@
 #include "item.h"
 
-
 void sort(Item *a, int lo, int hi)
 {
-    int* aux;
-    aux = (int*) malloc(hi * sizeof(int));
-
-    for(int i = lo; i<hi; i++)
-        aux[i] = a[i];
-
-    
-
-    free(aux);
+    int i, j;
+    for (i = lo + 1; i < hi; i++)
+        for (j = i; j > lo; j--)
+            compexch(a[j - 1], a[j])
 }
